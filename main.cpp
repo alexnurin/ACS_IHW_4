@@ -122,6 +122,9 @@ void input() {
         cin >> Taranteria.ammo_price;
         cout << "Enter reward for building in Taranteria:";
         cin >> Taranteria.building_price;
+        if (Anchuaria.ammo_price < 0 || Anchuaria.building_price < 0 || Taranteria.building_price < 0 || Taranteria.ammo_price < 0){
+            throw invalid_argument("Invalid input");
+        }
     } else if (cmd != 0) {
         throw invalid_argument("Invalid input");
     }
